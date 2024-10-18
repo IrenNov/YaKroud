@@ -1,0 +1,109 @@
+.persons {
+    position: relative;
+
+    @include mobile {
+        padding-inline: 11px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 468px;
+        }
+
+        h2 {
+            margin-block: 57px 0;
+
+            @include mobile {
+                margin-top: 20px;
+                line-height: 110%;
+            }
+        }
+
+        .persons-btn {
+            margin-block: 57px 0;
+
+            @include mobile {
+                margin-block: 0;
+            }
+
+            button {
+                width: 44px;
+                height: 44px;
+
+                @include mobile {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+
+        .counts {
+            padding-inline: 14px;
+        }
+    }
+
+    &__table {
+        margin-top: 60px;
+        overflow: hidden;
+
+        @include mobile {
+            position: absolute;
+            top: 13%;
+        }
+    }
+
+    &__list {
+        gap: 0;
+        transition: transform 0.5s ease;
+        width: 200%;
+
+        @include mobile {
+            width: 2010px;
+            li {
+                width: 335px;
+                height: 388px;
+
+                img {
+                    width: 244px;
+                    height: 244px;
+                }
+            }
+
+        }
+    }
+
+    &__card {
+        @include flex-center;
+        flex-direction: column;
+
+        h4,
+        p {
+            text-align: center;
+        }
+
+        p {
+            color: var(--color-dark-alt);
+            opacity: 0.6;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        h4 {
+            margin-block: 28px 6px;
+        }
+
+        button {
+            color: var(--color-accent-alt);
+            border-color: var(--color-accent-alt);
+            &:hover {
+                background-color: var(--color-accent-alt);
+                border-color: var(--color-accent-alt);
+            }
+        }
+    }
+}

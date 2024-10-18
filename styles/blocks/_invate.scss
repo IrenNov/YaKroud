@@ -1,0 +1,79 @@
+.invate {
+    margin-top: 140px;
+
+    @include mobile {
+        margin-top: 240px;
+        min-height: 1773px;
+        &__item {
+            flex-direction: column;
+            padding: 48px 10px;
+        }
+
+        .invate-card__img {
+            position: absolute;
+            transform: scale(0.9);
+        }
+
+        .second-card {
+            padding-top: 235px;
+            .discription {
+                width: 335px;
+            }
+        }
+    }
+
+    &__item {
+        @include flex-center(false);
+        column-gap: 64px;
+    }
+
+    &__list li:not(:last-child) {
+        margin-bottom: 64px;
+    }
+
+    .second-card {
+        gap: 44px;
+        height: 580px;
+        position: relative;
+
+        &__img {
+            width: 474px;
+            height: 527px;
+            overflow: visible;
+
+
+            .invate-img__second-card {
+                position: absolute;
+                left: -2%;
+                top: -5%;
+                width: 530px;
+
+                @include mobile {
+                    scale: 1.05;
+                    height: 400px;
+                    top: -13%;
+                }
+            }
+
+        }
+
+        .discription {
+            max-width: 704px;
+        }
+
+    }
+
+    .highlighted-text {
+        color: var(--color-accent);
+        font-weight: 700;
+        letter-spacing: 0.4px;
+    }
+
+    .padding-text {
+        display: block;
+        height: 261px;
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,46 @@
+.button {
+    @include flex-center(true);
+  
+    &--large {
+        @include button-size(true);
+    }
+    
+    &--small {
+        @include button-size(false);
+        &:hover {
+            color: var(--color-dark);
+            background-color: var(--btn-large-hover);
+            border-color: var(--btn-large-hover);
+          }
+    }
+
+    font-family: "GolosText-Medium", sans-serif;
+    font-size: 16px;
+    color: var(--color-light);
+    text-align: center;
+    background-color: var(--color-dark);
+    border: var(--border);
+
+    &:hover {
+      color: var(--color-dark);
+      background-color: var(--btn-large-hover);
+      border-color: var(--btn-large-hover);
+    }
+    
+  
+    &--transparent {
+      color: inherit;
+      background-color: transparent;
+
+      &:hover {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+        border-color: var(--color-dark);
+      }
+      @include mobile {
+        background-color: var(--color-light);
+        border-color: var(--color-light);
+      }
+    }
+
+}

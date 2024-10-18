@@ -1,0 +1,63 @@
+.marquee {
+    text-align: center;
+    position: relative;
+    top: 130px;
+
+
+
+    &__wrapper {
+        max-width: 100%;
+        overflow: hidden;
+        background-color: var(--color-accent);
+    }
+
+    &__content {
+        display: flex;
+        width: calc(300%);
+        padding-block: 18px;
+
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: marquee-scroll 20s linear infinite;
+        font-family: var(--second-family-base);
+        @include fluid-text (22, 16);
+        line-height: 110%;
+        text-transform: uppercase;
+        color: var(--color-light);
+        padding-inline: 5vw;
+
+    }
+
+    &__text span {
+        position: relative;
+        padding-right: 30px;
+    }
+
+    &__text span::after {
+        content: "\0025CF";
+        position: absolute;
+        left: -20px;
+        top: -4px;
+    }
+
+    @include mobile {
+        top: 290px;
+        &__content {
+            padding-block: 10px;
+        }   
+    }
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-48%);
+    }
+}

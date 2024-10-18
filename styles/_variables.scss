@@ -1,0 +1,40 @@
+:root {
+    --color-dark: #1f1f1f;
+    --color-dark-alt: #313131;
+    --color-light: #FFFFFF;
+    --color-light-alt: #E9DED4;
+    --color-accent: #F54932;
+    --color-accent-alt: #3057A2;
+    --btn-large-hover: #fbce51;
+    
+    --color-gray: #595653;
+
+
+    --border: 2px solid var(--color-dark);
+    --border-radius-small: 62px;
+    --border-radius-large: 66px;
+
+    --button-height-small: 35px;
+    --button-height-large: 72px;
+
+    --shadow: 0 5px 0 0 var(--color-dark);
+
+    --font-family-base: "GolosText-Regular", sans-serif;
+    --second-family-base: "Merriweather-Regular", sans-serif;
+    --third-family-base: "Montserrat-Medium", sans-serif;
+
+    --container-width: 1222px;
+    --container-padding-x: 9px;
+
+    --section-padding-y: 70px;
+
+
+
+    --transition-duration: 0.2s;
+
+
+
+    @include mobile {
+        --section-padding-y: 49px;
+    }
+}

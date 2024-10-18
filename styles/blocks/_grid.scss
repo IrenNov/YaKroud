@@ -1,0 +1,35 @@
+.grid {
+    --gridColumns: 2;
+  
+    display: grid;
+    
+    gap: 0;
+@for $i from 2 through 12 {
+      &--#{$i} {
+        --gridColumns: #{$i};
+        grid-template-columns: repeat(var(--gridColumns), 1fr);
+      }
+    }
+    
+  
+    &--2 {
+      grid-template-columns: 22.4vw 29.28vw;
+      @include mobile {
+        --gridColumns: 1;
+        grid-template-columns: repeat(var(--gridColumns), auto);
+      }
+    }
+  
+    &--3 {
+      --gridColumns: 3;
+      grid-template-columns: repeat(var(--gridColumns), 1fr);
+      gap: 20px;
+
+      @include mobile {
+        --gridColumns: 5;
+        grid-row-gap: 0;
+      }
+    }
+    
+    
+  }

@@ -1,0 +1,51 @@
+.slider-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    button {
+        background-color: var(--color-dark-alt);
+        color: var(--color-light);
+        border: none;
+        padding: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--btn-large-hover);
+        }
+
+        &:active {
+            background-color: var(--color-dark-alt);
+            transform: scale(1.05);
+        }
+
+        &:disabled {
+            background-color: rgba(49, 49, 49, 0.2);
+            cursor: not-allowed;
+        }
+
+    }
+
+    &__dots {
+        display: flex;
+        gap: 7px;
+        margin: 0 15px;
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: lightgray;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.active {
+                background-color: #333;
+            }
+        }
+    }
+}

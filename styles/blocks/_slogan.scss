@@ -1,0 +1,36 @@
+.slogan {
+    position: relative;
+    z-index: 10; 
+    &__body {
+        max-width: 542px;
+        padding-top: 58px;
+
+        @include mobile {
+            padding-top: 45px;
+           padding-inline: 8px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 40px;
+        color: var(--color-dark-alt);
+
+        @include mobile {
+            text-align: start;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__btn {
+        @include flex-center;
+        gap: 16px;
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+}

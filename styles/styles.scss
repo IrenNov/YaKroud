@@ -1,0 +1,21 @@
+@import 'normalize',
+'fonts',
+'mixins',
+'media',
+'variables',
+'utils',
+'globals';
+
+@import
+ "blocks/button",
+"blocks/section",
+"blocks/header",
+"blocks/slogan",
+"blocks/marquee",
+"blocks/invate",
+"blocks/grid",
+"blocks/table-info",
+"blocks/stages",
+"blocks/slider-btn",
+"blocks/persons",
+"blocks/footer";

@@ -1,0 +1,61 @@
+.header {
+
+    padding-top: 18px;
+    position: relative;
+    overflow: visible;
+    .hidden-x {
+        width: 100%;
+        overflow-x: hidden;
+        position: absolute;
+        top: -5px;
+        min-height: 902px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: "GolosText-Bold", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.08;
+        color: var(--color-gray);
+        text-transform: uppercase;
+        padding-block: 8px;
+
+
+        @include mobile-s {
+            .logo__img {
+                height: 27px;
+            }
+
+            gap: 5px;
+            font-size: 14px;
+            padding-block: 0;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        display: block;
+        top: -90px;
+        object-fit: cover;
+        object-position: center;
+        min-height: 790px;
+        z-index: -1;
+    }
+
+    &__bg {
+        overflow: visible;
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        top: 0;
+        height: 812px;
+        z-index: -2;
+
+        @include mobile-s {
+            left: -37%;
+        }
+    }
+
+}

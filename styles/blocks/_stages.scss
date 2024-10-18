@@ -1,0 +1,176 @@
+.stages {
+    margin-top: 7px;
+
+    @include mobile {
+        margin-top: 72px;
+    }
+
+    &__title h2 {
+        line-height: 120%;
+        max-width: 800px;
+        position: relative;
+
+        @include mobile {
+            line-height: 110%;
+            padding-left: 8px;
+        }
+
+        &::after {
+            content: "Будущие источники обогащения васюкинцев";
+            position: absolute;
+            bottom: 8px;
+            left: 38%;
+            @include fluid-text(20, 18);
+            color: var(--color-accent-alt);
+            text-transform: none;
+            font-family: var(--font-family-base);
+            display: block;
+            width: 280px;
+            line-height: 1.2;
+
+            @include mobile {
+                left: 8px;
+                bottom: -48%;
+                width: 100%;
+            }
+        }
+
+        @include mobile {
+            &::before {
+                content: "";
+                background: url(../images/fly.png) center / contain no-repeat;
+                height: 200px;
+                width: 395px;
+                position: absolute;
+                bottom: -225%;
+                left: 0;
+                z-index: 2;
+                transform: rotate(357deg);
+            }
+
+        }
+
+    }
+
+    &__table {
+        margin-top: 54px;
+        overflow: hidden;
+        @include mobile {
+            margin-top: 204px;
+            padding-left: 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        counter-reset: item-counter;
+
+        @include mobile {
+            transition: transform 0.3s ease;
+            margin-inline: 15px;
+        }
+
+        li {
+            position: relative;
+            padding: 20px 20px 20px 72px;
+            height: auto;
+            background: url(../images/fon.png) center/cover no-repeat,
+                var(--color-light-alt);
+            background-blend-mode: color-burn;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            p {
+                font-family: "GolosText-Medium", sans-serif;
+                color: var(--color-dark-alt);
+            }
+
+            &::before {
+                content: counter(item-counter);
+                counter-increment: item-counter;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 36px;
+                height: 36px;
+                background-color: var(--color-light);
+                color: var(--color-dark-alt);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "GolosText-SemiBold", sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            @include mobile {
+                width: 325px;
+                height: 150px;
+                padding: 62px 20px 0 72px;
+
+                &::before {
+                    top: auto;
+                }
+
+                &:nth-child(2) {
+                    order: 6;
+                    padding: 30px 20px 20px 72px;
+
+                }
+
+                &:nth-child(6) {
+                    order: 2;
+                    height: 100%;
+                    grid-row: span 2;
+                }
+
+                &:nth-child(5) {
+                    order: 7;
+                    padding: 30px 20px 20px 72px;
+                }
+
+                &:nth-child(7) {
+                    order: 5;
+                    height: 100%;
+                    grid-row: span 2;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .row-span {
+            grid-row: span 2;
+
+            @include mobile {
+                height: 100%;
+            }
+        }
+
+        .column-span {
+            grid-column: span 2;
+            padding-right: 290px;
+            position: relative;
+
+            @include mobile {
+                grid-column: auto;
+                padding: 62px 20px 0 72px;
+            }
+
+            @include mobile-above {
+                &::after {
+                    content: "";
+                    background: url(../images/fly.png) center/contain no-repeat;
+                    height: 235px;
+                    width: 400px;
+                    position: absolute;
+                    bottom: -1%;
+                    right: -8%;
+                }
+            }
+        }
+    }
+}

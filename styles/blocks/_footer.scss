@@ -1,0 +1,25 @@
+.footer {
+    position: relative;
+    margin-top: 70px;
+    @include mobile {
+        margin-top: 52px;
+    }
+    .marquee {
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+    background-color: var(--color-light-alt);
+    &__text {
+        font-size: 16px;
+        color: var(--color-dark-alt);
+        opacity: 0.6;
+        margin-block: 30px 2px;
+        @include mobile {
+            padding-inline: 11px;
+        }
+    }
+    .section {
+        padding-top: 5px;
+    }
+}
